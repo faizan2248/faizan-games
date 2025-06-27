@@ -1,169 +1,146 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0070)file:///C:/Users/M.Faizan/Desktop/Faizan%20Games%20%20%20finallll.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faizan Games</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./index_files/css2" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * {margin:0;padding:0;box-sizing:border-box;}
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      padding: 20px;
+      font-family:'Roboto',sans-serif;
+      background:url('https://wallpapercave.com/wp/wp7286310.jpg')no-repeat center center fixed;
+      background-size:cover;
+      color:#fff;
+      padding:20px;
+      backdrop-filter:blur(5px);
     }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    header h1 {
-      font-size: 3em;
-      color: #00adee;
-    }
-    .game-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
+    header{text-align:center;margin-bottom:40px;}
+    header img{width:100px;margin-bottom:10px;}
+    header h1{font-size:3em;color:#00adee;text-shadow:1px 1px 4px #000;}
+    header p{font-style:italic;font-weight:bold;font-size:1.2em;}
+    .game-grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;}
     .game-card {
-      background-color: #1f1f1f;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
+      background-color:rgba(0,0,0,0.75);
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.5);
+      transition:transform 0.3s ease;
     }
-    .game-card:hover {
-      transform: scale(1.03);
-    }
-    .game-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .game-card .content {
-      padding: 15px;
-    }
-    .game-card .content h3 {
-      margin-bottom: 10px;
-    }
+    .game-card:hover {transform:scale(1.03);}
+    .game-card img {width:100%;height:200px;object-fit:cover;}
+    .game-card .content {padding:15px;}
+    .game-card .content h3 {margin-bottom:10px;}
     .game-card .content a {
-      text-decoration: none;
-      color: #00adee;
-      background-color: #000;
-      padding: 10px 15px;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
+      text-decoration:none;color:#00adee;
+      background-color:#000;padding:10px 15px;
+      border-radius:5px;display:inline-block;margin-top:10px;
     }
     .game-card .content a:hover {
-      background-color: #00adee;
-      color: #000;
+      background-color:#00adee;color:#000;
     }
   </style>
-</head>
+<style type="text/css" id="operaUserStyle"></style></head>
 <body>
   <header>
-    <h1>Faizan Games</h1>
-    <p>Free games uploaded by Faizan</p>
+    
+    <img src="data:image/png;base64,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" alt="Faizan Games Logo">
+<h1>Faizan Games</h1>
+    <p>Free games to play just by <span style="font-style:italic;font-weight:bold;">FAIZAN</span></p>
   </header>
   <main class="game-grid">
     <div class="game-card">
-      <img src="https://i.imgur.com/xGG0zR2.jpg" alt="GTA 5">
+      <img src="./index_files/header.jpg" alt="Grand Theft Auto 5">
       <div class="content">
         <h3>Grand Theft Auto 5</h3>
         <a href="https://buzzheavier.com/ouvyovqmuez0" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/2uGkQJ7.jpg" alt="Red Dead Redemption 2">
+      <img src="./index_files/header(1).jpg" alt="Red Dead Redemption 2">
       <div class="content">
         <h3>Red Dead Redemption 2</h3>
         <a href="https://buzzheavier.com/ck7nob6r1bcv" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/hpEDjXK.jpg" alt="Hitman 3">
+      <img src="./index_files/hitman-3-free-download-preinstalled-steamrip.jpg" alt="Hitman 3">
       <div class="content">
         <h3>Hitman 3</h3>
         <a href="https://buzzheavier.com/7rjijthbriqo" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/09NHXgV.jpg" alt="Ghost of Tsushima">
+      <img src="./index_files/header(3).jpg" alt="Ghost of Tsushima">
       <div class="content">
         <h3>Ghost of Tsushima</h3>
         <a href="https://buzzheavier.com/8hottahqy8uc" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/0x14MuN.jpg" alt="Cyberpunk 2077">
+      <img src="./index_files/header(4).jpg" alt="Cyberpunk 2077">
       <div class="content">
         <h3>Cyberpunk 2077</h3>
         <a href="https://buzzheavier.com/rx20ieyt9m2e" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/45Qb2Np.jpg" alt="Forza Horizon 5">
+      <img src="./index_files/header(5).jpg" alt="Forza Horizon 5 Premium Edition">
       <div class="content">
         <h3>Forza Horizon 5 Premium Edition</h3>
         <a href="https://buzzheavier.com/fn3mpoo3qrhi" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/fRvTwd8.jpg" alt="Tekken 8">
+      <img src="./index_files/header(6).jpg" alt="Tekken 8">
       <div class="content">
         <h3>Tekken 8</h3>
         <a href="https://buzzheavier.com/4zkcxaq9xd5q" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/qkZ3vBi.jpg" alt="Modern Warfare 3">
+      <img src="data:image/webp;base64,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" alt="Call of Duty: Modern Warfare 3">
       <div class="content">
         <h3>Call of Duty: Modern Warfare 3</h3>
         <a href="https://buzzheavier.com/0u1yl6ux9hjf" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/qw74Cz8.jpg" alt="Hitman Absolution">
+      <img src="./index_files/header(7).jpg" alt="Hitman Absolution">
       <div class="content">
         <h3>Hitman Absolution</h3>
         <a href="https://buzzheavier.com/az9idxyg840b" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/M6B7MJ7.jpg" alt="FIFA 23">
+      <img src="./index_files/header(8).jpg" alt="FIFA 23 Ultimate Edition">
       <div class="content">
         <h3>FIFA 23 Ultimate Edition</h3>
         <a href="https://buzzheavier.com/zmasjuexf733" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/RyBhV9u.jpg" alt="Detroit Become Human">
+      <img src="./index_files/header(9).jpg" alt="Detroit: Become Human">
       <div class="content">
         <h3>Detroit: Become Human</h3>
         <a href="https://buzzheavier.com/jm9rg8ae8koj" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/yzDZKgf.jpg" alt="Granny 1">
+      <img src="./index_files/granny-preinstalled-steamrip.jpg" alt="Granny">
       <div class="content">
         <h3>Granny 1</h3>
         <a href="https://buzzheavier.com/hnq1tgo01ykt" target="_blank">Download</a>
       </div>
     </div>
     <div class="game-card">
-      <img src="https://i.imgur.com/p8gGhm4.jpg" alt="Palworld">
+      <img src="./index_files/header(10).jpg" alt="Palworld">
       <div class="content">
         <h3>Palworld</h3>
         <a href="https://buzzheavier.com/0ypjs2iw7wnr" target="_blank">Download</a>
       </div>
     </div>
   </main>
-</body>
-</html>
+
+
+</body></html>
